@@ -1,268 +1,116 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;1,100&display=swap');
-
-:root{
-    --green:#27ae60;
-    --dark-color:#219150;
-    --black:#444;
-    --light-color:#666;
-    --border:.1rem solid rgba(0,0,0,.1);
-    --border-hover:.1rem solid var(--black);
-    --box-shadow:0 .5rem 1rem rgba(0,0,0,.1);
-}
-
-*{
-    font-family: 'Poppins', sans-serif;
-    margin: 0; padding: 0;
-    box-sizing: border-box;
-    outline: none; border: none;
-    text-decoration: none;
-    text-transform:  capitalize;
-    transition: all .2s linear;
-    transition: width none;
-}
-
-html{
-    font-size: 62.5%;
-    overflow-x: hidden;
-    scroll-padding-top: 5rem;
-    scroll-behavior: smooth;
-}
-
-htmml::-webkit-scrollbar{
-    width: 1rem;
-}
-
-htmml::-webkit-scrollbar-track{
-    background: transparent;
-}
-
-htmml::-webkit-scrollbar-thumb{
-    background: var(--black);
-}
-
-.btn{
-    margin-top: 1rem;
-    display: inline-block;
-    padding: .9rem 3rem;
-    border-radius: .5rem;
-    color: #fff;
-    background: var(--green);
-    font-size: 1.7rem;
-    cursor: pointer;
-    font-weight: 500;
-}
-
-.btn:hover{
-    background: var(--dark-color);
-}
-
-.header .header-1{
-    background: #fff;
-    padding: 1.5rem 9%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.header .header-1 .logo{
-    font-size: 2.5rem;
-    font-weight: bolder;
-    color: var(--black); 
-}
-
-.header .header-1 .logo i{
-    color: var(--green);
-}
-
-.header .header-1 .search-form{
-    width: 50rem;
-    height: 5rem;
-    border: var(--border);
-    overflow: hidden;
-    background: #fff;
-    display: flex;
-    align-items: center;
-    border-radius: .5rem;
-}
-
-.header .header-1 .search-form input{
-    font-size: 1.6rem;
-    padding: 0 1.2rem;
-    height: 100%;
-    width: 100%;
-    text-transform: none;
-    color: var(--black);
-}
-
-.header .header-1 .search-form label{
-    font-size: 2.5rem;
-    padding-right: 1.5rem;
-    color: var(--black);
-    cursor: pointer;
-}
-
-.header .header-1 .search-form label:hover{
-    color: var(--green);
-}
-
-.header .header-1 .icons div,
-.header .header-1 .icons a{
-    font-size: 2.5rem;
-    margin-left: 1.5rem;
-    color: var(--black);
-    cursor: pointer;  
-}
-
-.header .header-1 .icons div:hover,
-.header .header-1 .icons a:hover{
-    color: var(--green);
-}
-
-#search-btn{
-    display: none;
-}
-
-.header .header-2{
-    background: var(--green);
-}
-
-.header .header-2 .navbar{
-    text-align: center;
-}
-
-.header .header-2 .navbar a{
-    color: #fff;
-    display: inline-block;
-    padding: 1.2rem;
-    font-size: 1.7rem;
-}
-
-.header .header-2 .navbar a:hover{
-    background: var(--dark-color);
-}
-
-.header .header-2.active{
-    position: fixed;
-    top: 0; left: 0; right: 0;
-    z-index: 1000;
-
-}
-
-
-.bottom-navbar{
-    text-align: center;
-    background: var(--green);
-    position: fixed;
-    bottom: 0; left: 0; right: 0;
-    z-index: 1000;
-}
-
-.bottom-navbar a{
-    font-size: 2.5rem;
-    padding: 2rem;
-    color: #fff;
-}
-
-.bottom-navbar a:hover{
-    background: var(--dark-color);
-}
-
-.login-form-container{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: rgba(255,255,255,.9);
-    position: fixed;
-    top: 0; right: -105%;
-    z-index: 10000;
-    height: 100%;
-    width: 100%;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookzShop</title>
+
+    <!--font awesoome cdn link-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!--custom css file link-->
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+    
+    <!--header section starts-->
+
+    <header class="header">
 
-.login-form-container.active{
-    right: 0;
-}
+        <div class="header-1">
 
-.login-form-container form{
-    background: #fff;
-    border: var(--border);
-    width: 40rem;
-    padding: 2rem;
-    box-shadow: var(--box-shadow);
-    border-radius: .5rem;
-    margin: 2rem;
-}
+            <a href="#" class="logo"> <i class="fas fa-book"></i> BookzShop </a>
 
-.login-form-container form h3{
-    font-size: 2.5rem;
-    text-transform: uppercase;
-    color: var(--black);
-    text-align: center;
-}
+            <form action="" class="search-form">
+                <input type="search" name="" placeholder="search here..." id="search-box">
+                <label for="search-box" class="fas fa-search"></label>            
+            </form>
 
-.login-form-container form span{
-    display: block;
-    font-size: 1.5rem;
-    padding-top: 1rem;
-}
+            <div class="icons">
+                <div id="search-btn" class="fas fa-search"></div>
+                <a href="#" class="fas fa-heart"></a>
+                <a href="#" class="fas fa-shopping-cart"></a>
+                <div id="login-btn" class="fas fa-user"></div>
+            </div>
 
-.login-form-container form .box{
-    width: 100%;
-    margin: .7rem 0;
-    font-size: 1.6rem;
-    border: var(--border);
-    border-radius: .5rem;
-    padding: 1rem 1.2rem;
-    color: var(--black);
-    text-transform: none;
-}
+        </div>
 
-.login-form-container form .checkbox{
-    display: flex;
-    align-items: center;
-    gap: .5rem;
-    padding: 1rem 0;
-}
+        <div class="header-2">
+            <nav class="navbar">
+                <a href="#home">home</a>
+                <a href="#featured">featured</a>
+                <a href="#arrivals">arrivals</a>
+                <a href="#reviews">reviews</a>
+                <a href="#blogs">blogs</a>
+            </nav>
+        </div>
 
-.login-form-container form .checkbox label{
-    font-size: 1.5rem;
-    color: var(--light-color);
-    cursor: pointer;
-}
+    </header>
 
-.login-form-container form .btn{
-    text-align: center;
-    width: 100%;
-    margin: 1.5rem 0;
-}
+    <!--header section ends-->
 
-.login-form-container form p{
-    padding-top: .8rem;
-    color: var(--light-color);
-    font-size: 1.5rem;
-}
+    <!--bottom navbar -->
 
-.login-form-container form p a{
-    color: var(--green);
-    text-decoration: underline;
-}
+    <nav class="bottom-navbar">
+        <a href="#home" class="fas fa-home"></a>
+        <a href="#featured" class="fas fa-list"></a>
+        <a href="#arrivals" class="fas fa-tags"></a>
+        <a href="#reviews" class="fas fa-comments"></a>
+        <a href="#blogs" class="fas fa-blogs"></a>
+    </nav>
 
-.login-form-container #close-login-btn{
-    position: absolute;
-    top: 1.5rem; right: 2.5rem;
-    font-size: 5rem;
-    color: var(--black);
-    cursor: pointer;
-}
+    <!--login form -->
 
+    <div class="login-form-container">
+        
+        <div id="close-login-btn" class="fas fa-times"></div>
+        <form action="">
+            <h3>sign in</h3>
+            <span>username</span>
+            <input type="email" name="" class="box" placeholder="enter your email" id="">
+            <span>password</span>
+            <input type="password" name="" class="box" placeholder="enter your password" id="">
+            <div class="checkbox">
+                <input type="checkbox" name="" id="remember-me">
+                <label for="remember-me"> remember me</label>
+            </div>
+            <input type="submit" value="sign in" class="btn">
+            <p>forget password ? <a href="#">click here</a></p>
+            <p>don't have an account ? <a href="#">create one</a></p>
+        </form>
 
+    </div>
 
 
+    <!-- home section starts -->
 
+    <section class="home" id="home">
 
+        <div class="row">
+            <div class="content">
+                <h3>upto 25% off</h3>
+                <p>Get 25% discount when you signup to the website and also purchase 
+                any of our books not less than GH¢20.00!!!</p>
+                <a href="#" class="btn">shop now</a>
+            </div>
 
+            <div class="books-slider">
+                <div class="wrapper">
+                    <a href="#"><img src="images/book1.jpg" alt=""></a>
+                    <a href="#"><img src="images/book2.jpg" alt=""></a>
+                    <a href="#"><img src="images/book3.jpg" alt=""></a>
+                    <a href="#"><img src="images/book4.jpg" alt=""></a>
+                    <a href="#"><img src="images/book6.jpg" alt=""></a>
+                    <a href="#"><img src="images/book9.jpg" alt=""></a>
+            </div>
+            <img src="images/shelf.jpg" class="stand" alt="">
+        </div>
 
+    </section>
 
+    <!-- home section starts -->
 
 
 
@@ -281,68 +129,9 @@ htmml::-webkit-scrollbar-thumb{
 
 
 
+    <!----custom js file link-->
+    <script src="js/script.js"></script>
 
+</body>
+</html>
 
-/*media queries*/
-
-@media (max-width:991px){
-   
-    html{
-        font-size: 55%;
-    }
-
-    .header .header-1{
-        padding: 2rem;
-    }
-
-}
-
-@media (max-width:768px){
-
-    html{
-        scroll-padding-top: 0;
-    }
-
-    body{
-        padding-bottom: 6rem;
-    }
-
-    .header .header-2{
-        display: none;
-    }
-
-    .bottom-navbar{
-        display: block;
-    }
-#search-btn{
-    display: inline-block;
-}
-
-    .header .header-1{
-        box-shadow: var(--box-shadow);
-        position: relative;
-    }
-
-    .header .header-1 .search-form{
-        position: absolute;
-        top: 115%; right: 2rem;
-        width: 90%;
-        box-shadow: var(--box-shadow);
-    }
-
-    .header .header-1 .search-form.active{
-        top: 115%;
-    }
-
-}
-
-@media (max-width:450px){
-   
-    html{
-        font-size: 50%;
-    }
-
-    .header .header-1{
-        padding: 2rem;
-    }
-}
